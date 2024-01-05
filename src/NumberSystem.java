@@ -12,17 +12,18 @@ public class NumberSystem {
             targetBaseChars[i]=digits[i];
         }
         int numBase10 = convertToBase10(num,base);
-        System.out.println(numBase10);
+        int length;
+
         return out;
     }
     private static int convertToBase10(String num, int base){
         String rNum = "";
         for(int i = 0; i<num.length();i++){
-            rNum = 
+            rNum = num.charAt(i)+rNum;
         }
         int out = 0;
-        for(int i = num.length()-1; i>=0;i--){
-            char digit = num.charAt(i);
+        for(int i = rNum.length()-1; i>=0;i--){
+            char digit = rNum.charAt(i);
             for(int b = 0; b<digits.length;b++){
                 if(digits[b]==digit){
                     out+=b*Math.pow(base,i);

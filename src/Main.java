@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        NumberSystem.convert("4B",16,10);
+        System.out.println(NumberSystem.convert("271",8,16));
     }
 }

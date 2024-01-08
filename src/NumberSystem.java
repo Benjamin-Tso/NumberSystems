@@ -5,15 +5,13 @@ public class NumberSystem {
     private static final String digitsStr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
     public static String convert(String num, int base, int targetBase){
         String out = "";
-        char[] baseChars = new char[base];
-        for(int i = 0; i<base;i++){
-            baseChars[i]=digits[i];
+        int numBase10;
+        if(base!=10) {
+            numBase10 = convertToBase10(num, base);
         }
-        char[] targetBaseChars = new char[targetBase];
-        for(int i = 0; i<targetBase;i++){
-            targetBaseChars[i]=digits[i];
+        else{
+            numBase10 = Integer.parseInt(num);
         }
-        int numBase10 = convertToBase10(num,base);
         int length=0;
         for(int i = 0;!(Math.pow(targetBase,i)>numBase10);i++){
             length = i+1;

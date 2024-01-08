@@ -47,4 +47,12 @@ public class NumberSystem {
         }
         return out;
     }
+    public static boolean valid(String num, int base){
+        for(int i = 0; i<num.length();i++){
+            if(!digitsStr.substring(0,base).contains(String.valueOf(num.charAt(i)))){
+                return false;
+            }
+        }
+        return true;
+    }
 }

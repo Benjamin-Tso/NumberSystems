@@ -17,6 +17,6 @@ public class Main {
         System.out.print("Enter the base you want to convert your number to : ");
         int targetBase = Integer.parseInt(s.nextLine());
         s.close();
-        System.out.println(num + "(base " + base + ") is " + NumberSystem.convert(num, base, targetBase) + " in base " + targetBase);
+        System.out.println(num + " (base " + base + ") is " + NumberSystem.convert(num, base, targetBase) + " in base " + targetBase);
     }
 }

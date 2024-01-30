@@ -32,6 +32,9 @@ public class NumberSystem {
 
         return out;
     }
+    public static String[] convertToArray(String num, int base, int targetBase){
+            return convert(num, base, targetBase).split("");
+    }
     public static String convert(String num, int targetBase){
         return convert(num, 10, targetBase);
     }

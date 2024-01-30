@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -18,5 +19,6 @@ public class Main {
         int targetBase = Integer.parseInt(s.nextLine());
         s.close();
         System.out.println(num + " (base " + base + ") is " + NumberSystem.convert(num, base, targetBase) + " in base " + targetBase);
+        System.out.println("digits: " + Arrays.toString(NumberSystem.convertToArray(num, base, targetBase)));
     }
 }
